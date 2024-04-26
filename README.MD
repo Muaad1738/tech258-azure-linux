@@ -51,3 +51,32 @@ The Azure Pricing Calculator is a tool provided by Microsoft to estimate the cos
 
  The Azure Pricing Calculator helps users plan and budget for their Azure deployments, optimise costs, and make informed decisions about which Azure services to use.
 
+## Diffrences when deploying a VM with azure than with AWS
+- In Azure, assigning a static IP to a VM is a straightforward process. When creating or configuring a VM, you can choose to assign a static IP address to it. Azure allows you to reserve an IP address and associate it with the VM, ensuring that the IP remains constant even if the VM is stopped and started.
+
+# Deloying the app using user data
+ Using user data when creating a VM on Azure automates the process, ensuring consistency, efficiency, and scalability compared to manual input via shell commands.
+
+
+## Create a VM for the Database
+ - Create a Virtual Machine for the database.
+ - Assign the correct virtual network and the security settings.
+ - Enter the correct working bash script on the user data section
+ - Run the Database VM
+ - Give it time for it run
+## Create a VM for the App
+- Follow the steps as above 
+- Enter the working bash script for the app
+- Once the app VM is ready get the public ID and check the link to see if its running.
+
+# deploying an app using an image 
+
+
+- What is an Azure Image and its equivalent on AWS?
+An Azure Image is a snapshot of a virtual machine (VM) that includes the OS disk, configurations, and installed applications. On AWS, the equivalent is called an Amazon Machine Image (AMI).
+
+- What is included in the image, and what is not?
+The image includes the OS disk, configurations, and installed applications. What's not included are temporary or dynamic data, such as runtime logs or user-generated content, to keep the image lightweight and reusable.
+
+- What is the side-effect of creating an image of a VM on Azure?
+After creating the image, the original VM is generalised, which means it's sysprep'd, making it unable to log back in without reconfiguration.
