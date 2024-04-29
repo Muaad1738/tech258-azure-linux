@@ -69,8 +69,24 @@ The Azure Pricing Calculator is a tool provided by Microsoft to estimate the cos
 - Enter the working bash script for the app
 - Once the app VM is ready get the public ID and check the link to see if its running.
 
-# deploying an app using an image 
-
+# Deploying an app using an image 
+- Prepare the Existing VM:
+     -    Ensure that your existing VM, which hosts the database, is properly configured and running on Azure.
+     -   Verify that your database and all necessary configurations are in place and working correctly.
+     -    Capture VM Image:
+     -    Log in to the Azure Portal.
+     -   Navigate to the Virtual Machines section.
+     -   Select the VM that hosts the database.
+     -  In the VM blade, locate the Capture button (usually under the Operations section) and click on it.
+     -   Follow the prompts to capture the VM image. You'll be asked to provide details such as the image name, resource group, etc.
+     -   Once the image capture process is complete, Azure will create a generalised image of your VM that can be used to create new VM instances.
+- Create a New VM from the Captured Image:
+    -    In the Azure Portal, navigate to the Images section under the Compute category.
+     -   Locate the image that you captured in the previous step and click on it.
+     -   In the image blade, click on the Create VM button.
+        Follow the prompts to create a new VM from the captured image. You'll need to provide details such as the VM name, resource group, virtual network settings, etc.
+     -   Customiae the VM settings as needed, such as the VM size, disk configurations, authentication settings, etc.
+     -   Once the VM creation process is complete, you'll have a new VM instance created from the captured image
 
 - What is an Azure Image and its equivalent on AWS?
 An Azure Image is a snapshot of a virtual machine (VM) that includes the OS disk, configurations, and installed applications. On AWS, the equivalent is called an Amazon Machine Image (AMI).
