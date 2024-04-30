@@ -172,8 +172,11 @@ sudo systemctl enable mongod
 - In Azure, assigning a static IP to a VM is a straightforward process. When creating or configuring a VM, you can choose to assign a static IP address to it. Azure allows you to reserve an IP address and associate it with the VM, ensuring that the IP remains constant even if the VM is stopped and started.
 
 # Deloying the app using user data
- Using user data when creating a VM on Azure automates the process, ensuring consistency, efficiency, and scalability compared to manual input via shell commands.
-
+-  Using user data when creating a VM on Azure automates the process, ensuring consistency, efficiency, and scalability compared to manual input via shell commands.
+- you also need to use the absoloute path to locate the app.
+  ```bash 
+  cd /home/ubuntu/tech258-sparta-test-app/Sparta_test_folder/app
+  ```
 
 ## Create a VM for the Database
  - Create a Virtual Machine for the database.
