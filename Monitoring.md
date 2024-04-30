@@ -6,8 +6,8 @@ From worst to best, the priority for monitoring and responding to load/traffic o
 
 1. Reactive Approach: Waiting for users to report issues before taking action.
 2. Threshold-Based Alerting: Setting thresholds for key metrics (e.g., CPU, memory, network) using Azure Monitor and triggering alerts when thresholds are exceeded.
-3. Proactive Monitoring: Utilising Azure Monitor to monitor key metrics in real-time and taking preemptive action based on trends and anomalies.
-4. Predictive Scaling: Leveraging Azure Autoscale to automatically scale resources based on predicted load changes.
+3. Monitoring: Utilising Azure Monitor to monitor key metrics in real-time and taking preemptive action based on trends and anomalies.
+4. Scaling: Leveraging Azure Autoscale to automatically scale resources based on predicted load changes.
 
 ## 2. Setting Up a Dashboard on Azure Monitor
 
@@ -47,5 +47,7 @@ To create a CPU usage alert for your Azure app instance:
 ### 2. Check Average CPU Usage
 
 Ensure the alert checks the average CPU usage for each minute to accurately capture performance fluctuations and potential issues.
+![alt text](images/minute.png)
+
 
 
