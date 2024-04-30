@@ -14,7 +14,7 @@
 -  Provide instructions or scripts for execution during the creation of a virtual machine instance.
 -  Commands or scripts specified in the user data section are automatically executed during VM provisioning, without requiring manual intervention or SSH access.
 
-### Image/AMI
+### Image
 -  A snapshot of a virtual machine's state, including the operating system, installed software, and configuration settings.
 -  Images are used as templates to create new virtual machine instances with identical configurations, speeding up deployment and ensuring consistency.
 
@@ -44,6 +44,8 @@
   ![capture](images/capture.png)
      -  In the VM blade, locate the Capture button and click on it.
      -   Follow the prompts to capture the VM image. You'll be asked to provide details such as the image name, resource group, etc.
+    ![alt text](images/captureman.png)
+     - Capturing only a managed image provides more control over where the image is stored and who has access to it, which can be important for privacy and security purposes.
      -   Once the image capture process is complete, Azure will create a generalised image of your VM that can be used to create new VM instances.
 - Create a New VM from the Captured Image:
     -    In the Azure Portal, navigate to the Images section under the Compute category.
@@ -54,20 +56,20 @@
   ![user-data](images/user-data.png)
   Insert the following script for the App vm only. No user data is needed for the database VM
 ```bash 
-    echo "Changing directory to app folder..."
+    echo Changing directory to app folder...
     cd /home/ubuntu/tech258-sparta-test-app/Sparta_test_folder/app
-    echo "Done!"
+    echo Done!
 
     export DB_HOST=mongodb://10.0.3.4:27017/posts
 
-    echo "Installing app dependencies..."
+    echo Installing app 
     npm install
 
-    echo "Stopping previous PM2 processes..."
+    echo Stopping previous PM2 processes...
     pm2 kill
     echo "Done!"
 
-    echo "Starting the app..."
+    echo Starting the app..
     pm2 start app.js
     echo "Done!"
 ``` 
@@ -92,7 +94,11 @@ Specialised images are customised images pre-configured for specific purposes or
 
 The difference lies in the level of customisation: specialised images are tailored for specific tasks or applications, whereas generalised images are more generic and can serve as a starting point for various scenarios in Azure.
 
-
+### Changing the file permissions
+- Use sudo -E: To gain superuser permissions while retaining environment variables for the command.
+- Using Chmod: Adjust permissions using chmod to modify access levels.
+- Login as the root user: Temporarily log in as root to access privileges.
+- Take ownership of the folder: Transfer ownership of the folder to gain access rights.
 
 
 
