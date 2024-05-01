@@ -26,6 +26,10 @@ Combining load testing with Azure Monitor dashboard monitoring allows us to:
 - Monitor key metrics in real-time using Azure Monitor to identify performance bottlenecks and issues.
 - Optimise Azure resources and configurations based on load testing results and dashboard insights.
 
+Using Apache Bench to load test.
+- ```sudo apt-get install apache2-utils```
+- ```ab -n 1000 -c 100 http://yourwebsite.com/``` This will send requests to our sparta app. `-n` is the total number of requests. `-c` number of requests per block. 
+
 ## 4. Dashboard during Extreme Load Testing
 
 
@@ -48,6 +52,7 @@ To create a CPU usage alert for your Azure app instance:
 
 Ensure the alert checks the average CPU usage for each minute to accurately capture performance fluctuations and potential issues.
 ![alt text](images/minute.png)
+
 
 
 
