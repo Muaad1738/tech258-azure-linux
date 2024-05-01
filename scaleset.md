@@ -2,15 +2,11 @@
 
 ## Preparing for VM Scale Set Creation:
 
-1. **Plan Resources:**
-   - Determine the VM size, image, and other configurations needed for your application.
-   - Ensure that your Azure subscription has the necessary resources available.
-
-2. **Test the Application:**
+1. **Test the Application:**
    - Ensure that your application works as expected on a single VM.
    - Test the scalability and performance of your application to understand potential bottlenecks.
 
-3. **Networking Configuration:**
+2. **Networking Configuration:**
    - Set up virtual networks, subnets, and security groups as needed for your VMs.
 
 ## Creating VM Scale Set:
