@@ -28,7 +28,7 @@ Combining load testing with Azure Monitor dashboard monitoring allows us to:
 
 Using Apache Bench to load test.
 - ```sudo apt-get install apache2-utils```
-- ```ab -n 1000 -c 100 http://yourwebsite.com/``` This will send requests to our sparta app. `-n` is the total number of requests. `-c` number of requests per block. 
+- ```ab -n 1000 -c 100 http://yourwebsite.com/``` This will send requests to our sparta app. `-n` is the total number of requests. `-c` number of requests per block. This will send 1000 requests with 100 blocks.  
 
 ## 4. Dashboard during Extreme Load Testing
 
