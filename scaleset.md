@@ -28,7 +28,8 @@
 
 ## Managing Instances:
 
-- **Reimaging:** Reimaging a VM restores it to its original state using the base image. This process removes any changes made to the VM since its creation. This allows you to make changes to the user data.
+- **Reimaging:** Reimaging a VM restores it to its original state using the base image. This process removes any changes made to the VM since its creation. 
+- 
 
 
 ## SSH into an Instance in VM Scale Set:
