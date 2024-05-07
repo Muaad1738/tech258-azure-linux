@@ -1,5 +1,11 @@
 # Securing Database Subnet with DMZ in Azure
-![alt text](images/diagram.png)
+![alt text](images/diagram2.png)
+
+The DMZ, or Demilitarized Zone, serves as an additional security layer, strategically placing certain resources and services in a neutral zone. Positioned between the internal network and the public internet, the DMZ is more exposed to external threats than the internal network but less so than the public internet.
+
+Within the DMZ subnet, an extra layer of security is enforced, complementing the public and private subnets. To facilitate communication between the App VM and the Database VM, traffic is routed through a Network Virtual Appliance (NVA) VM. This ensures that only authorised traffic can access the Database VM, enhancing security.
+
+Notably, the Database VM is devoid of a public IP address. This deliberate measure safeguards the database, preventing unauthorised access from the public domain.
 ## Introduction
 In Azure networking, implementing a DMZ can enhance security by segregating different tiers of your application architecture. 
 
@@ -30,11 +36,6 @@ Now, let's discuss how implementing a DMZ enhances security in this architecture
 - **Additional Layer of Defense**: The DMZ acts as an additional layer of defense, intercepting and filtering traffic before it reaches critical backend systems. Even if a component in the DMZ is compromised, the impact on the internal network is limited due to the segregation provided by the DMZ.
 
 - **Enhanced Monitoring and Logging**: By consolidating public-facing resources in the DMZ, it becomes easier to monitor and analyse network traffic, security logs, and potential security incidents. This visibility improves the overall security posture of the architecture.
-
-## Prerequisites
-- Azure subscription
-- Basic understanding of Azure Virtual Networks and Subnets
-- Knowledge of Azure Security Groups and Network Security Groups
 
 
 ## Conclusion
